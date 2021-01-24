@@ -7,10 +7,10 @@ const useCriptoCurrency = (label, intialState, options) => {
   const select = () => (
     <Fragment>
       <label htmlFor="" className="lavel"> {label} </label>
-      <select name="" id="" onChange={(e) => updateState(e.target.value)} value={state}>
+      <select data-testid="criptoSelect" name="" id="" onChange={(e) => updateState(e.target.value)} value={state}>
         <option value=""> - Select - </option>
         {options.map((option) => (
-          <option key={option.CoinInfo.Id} value={option.CoinInfo.Name}>
+          <option data-testid="criptoOption" key={option.CoinInfo.Id} value={option.CoinInfo.Name}>
             {option.CoinInfo.FullName}
           </option>
         ))}

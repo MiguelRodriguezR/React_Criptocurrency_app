@@ -53,11 +53,11 @@ const Form = ({ saveCriptoCurrency, saveCurrency }) => {
   };
 
   return (
-    <form action="" onSubmit={getPrice}>
+    <form  action="" onSubmit={getPrice}>
       {error ? <Error message={"All fields are required"}></Error> : null}
       <SelectCurrency></SelectCurrency>
       <SelectCriptoCurrency></SelectCriptoCurrency>
-      <button className="button" type="submit">
+      <button data-testid="submit" className="button" type="submit">
         Get Price
       </button>
     </form>

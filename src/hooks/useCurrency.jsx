@@ -7,7 +7,7 @@ const useCurrency = (label, intialState, options) => {
   const select = () => (
     <Fragment>
       <label htmlFor="" className="lavel"> {label} </label>
-      <select name="" id="" onChange={(e) => updateState(e.target.value)} value={state}>
+      <select data-testid="select-currency" name="" id="" onChange={(e) => updateState(e.target.value)} value={state}>
         <option value=""> - Select - </option>
         {options.map((option) => (
           <option key={option.code} value={option.code}>
